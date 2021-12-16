@@ -15,14 +15,14 @@ module "primary_queue" {
     source           = "../queues"
     name             = "Primary Queue 1"
     description      = "The primary queue called from 'Queue Members Check' inbound call flow."
-    queue_member_ids = var.primary_queue_members_ids
+    queue_member_ids = var.primary_queue_member_ids
 }
 
 module "secondary_queue" {
     source           = "../queues"
     name             = "Secondary Queue 1"
     description      = "The secondary queue called from 'Queue Members Check' inbound call flow."
-    queue_member_ids = var.secondary_queue_members_ids
+    queue_member_ids = var.secondary_queue_member_ids
 }
 
 module "call_ivr" {
@@ -38,7 +38,7 @@ resource "null_resource" "deploy_archy_flow" {
         module.check_queue_data_action
     ]
     provisioner "local-exec" {
-        command = "archy publish --forceUnlock --file ./Queue-Members-Check.yml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION"
+        command = "archy publish --forceUnlock --file ./${var.archy_flow_file_name} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION"
     }
 }
 

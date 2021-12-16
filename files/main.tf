@@ -15,9 +15,10 @@ provider "genesyscloud" {
 module "check_queue_flow" {
     source = "./modules/check-queue-flow"
 
-    did_numbers                 = ["+1 720-588-4549"]
-    primary_queue_members_ids   = []
-    secondary_queue_members_ids = [data.genesyscloud_user.user1.id, data.genesyscloud_user.user2.id]
+    archy_flow_file_name        = "archy_flow.yml"
+    did_numbers                 = ["+1 720-588-4555"]
+    primary_queue_member_ids   = []
+    secondary_queue_member_ids = [data.genesyscloud_user.user1.id, data.genesyscloud_user.user2.id]
 }
 
 data "genesyscloud_user" "user1" {
