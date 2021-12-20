@@ -13,14 +13,14 @@ module "check_queue_data_action" {
 
 module "primary_queue" {
     source           = "../queues"
-    name             = "Primary Queue 1"
+    name             = "Primary Queue Example"
     description      = "The primary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.primary_queue_member_ids
 }
 
 module "secondary_queue" {
     source           = "../queues"
-    name             = "Secondary Queue 1"
+    name             = "Secondary Queue Example"
     description      = "The secondary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.secondary_queue_member_ids
 }
@@ -38,7 +38,7 @@ resource "null_resource" "deploy_archy_flow" {
         module.check_queue_data_action
     ]
     provisioner "local-exec" {
-        command = "archy publish --forceUnlock --file ./${var.archy_flow_file_name} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION"
+        command = "archy publish --forceUnlock --file ./${var.archy_flow_file} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_DOMAIN"
     }
 }
 

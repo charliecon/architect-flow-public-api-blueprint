@@ -87,7 +87,7 @@ inboundCall:
         name: Main Menu
         refId: Main Menu_10
         audio:
-          tts: You are at the Main Menu. Press 1 to talk to someone. Press 2 to disconnect.
+          tts: Press 1 to connect to an agent. Press 2 to disconnect.
         settingsMenu:
           extensionDialingMaxDelay:
             noValue: true
@@ -136,7 +136,7 @@ inboundCall:
           - findQueue:
               name: Find Queue
               findName:
-                lit: Primary Queue 1
+                lit: Primary Queue Example
               findResult:
                 var: Task.PrimaryQueue
               outputs:
@@ -201,7 +201,7 @@ inboundCall:
                                             name: Transfer to ACD
                                             targetQueue:
                                               lit:
-                                                name: Secondary Queue 1
+                                                name: Secondary Queue Example
                                             preTransferAudio:
                                               tts: You are going to the secondary queue.
                                             failureTransferAudio:

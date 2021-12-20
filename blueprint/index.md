@@ -15,7 +15,7 @@ This Genesys Cloud Developer Blueprint provides an example of how to integrate a
 
 ## Scenario 
 
-A customer wants to design an inbound call flow in Architect that will use a data action to call a public API endpoint and determine if there are any agents available on a given queue. If not, the caller should be transferred to a secondary queue. This customer is unfamiliar with such an architecture and would like to see a working example configured in their organisation. 
+A customer wants to design an inbound call flow in Architect that will use a data action to determine if there are any agents available on a given queue. If not, the caller should be transferred to a secondary queue. This customer is unfamiliar with such an architecture and would like to see a working example configured in their organisation. 
 
 ## Solution
 
@@ -101,7 +101,7 @@ $ terraform apply --auto-approve
 
 ## Test your flow
 
-Dial a phone number that was provided to the `did_numbers` attribute in `main.tf`. If everything deployed correctly, you should hear "Welcome to the main menu. Press 1 to connect to an agent. Press 2 to disconnect." After pressing 1, you will transfered to the primary or seconday queue depending on agent availability in the primary queue. 
+Dial a phone number that was provided to the `did_numbers` attribute in `main.tf`. If everything deployed correctly, you should hear "Welcome to the main menu. Press 1 to connect to an agent. Press 2 to disconnect." After pressing 1, you will be transferred to the primary or seconday queue depending on agent availability in the primary queue. 
 
 ## Additional resources
 
@@ -109,5 +109,5 @@ Dial a phone number that was provided to the `did_numbers` attribute in `main.tf
 * [CX as Code](https://developer.genesys.cloud/api/rest/CX-as-Code/ "Opens the CX as Code page in the dev center") 
 * [Genesys Cloud provider documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Opens the Genesys Cloud provider docs on registry.terraform.io") 
 * [Archy](https://developer.genesys.cloud/devapps/archy/ "Opens the Archy documentation in the dev center") 
-* ["Deploy a simple IVR using Terraform, CX as Code, and Archy"](https://developer.genesys.cloud/blueprints/simple-ivr-deploy-with-cx-as-code-blueprint/ "Opens a blueprint on the dev center") - A blueprint which describes provisioning the resources needed for an IVR flow using CX as Code and the deployment phases of those Genesys Cloud objects. 
+* ["Deploy a simple IVR using Terraform, CX as Code, and Archy"](https://developer.genesys.cloud/blueprints/simple-ivr-deploy-with-cx-as-code-blueprint/ "Opens a blueprint on the dev center") - A blueprint that describes provisioning the resources needed for an IVR flow using CX as Code and the deployment phases of those Genesys Cloud objects. 
 * The [architect-flow-public-api-blueprint](https://github.com/charliecon/architect-flow-public-api-blueprint "Opens the project repository on GitHub") repository on GitHub

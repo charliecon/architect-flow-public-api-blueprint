@@ -13,7 +13,7 @@ variable "secondary_queue_member_ids" {
     description = "IDs of the members in the secondary queue"
 }
 
-variable "archy_flow_file_name" {
+variable "archy_flow_file" {
     type        = string
     description = "The name of the YAML file containing the exported archy flow."
     default     = "archy_flow.yml"
