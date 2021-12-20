@@ -3,7 +3,7 @@ title: Integrate a public API call into an Architect flow
 author: charlie.conneely
 indextype: blueprint
 icon: blueprint
-image: 
+image: images/CallFlow.png
 category: 5
 summary: |
   This Genesys Cloud Developer Blueprint provides an example of how to integrate a public API call into an Architect flow to check if any agents are available on a given queue and make routing decisions based on the outcome. 
@@ -20,6 +20,8 @@ A customer wants to design an inbound call flow in Architect that will use a dat
 ## Solution
 
 A configurable remote Terraform module that uses CX as Code and Archy to deploy all Genesys Cloud infrastructure such as queues, data actions, and Architect flows. 
+
+![Integrate a public API call into an Architect flow](images/CallFlow.png "Integrate a public API call into an Architect flow")
 
 ## Contents
 
