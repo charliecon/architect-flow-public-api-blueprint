@@ -1,7 +1,7 @@
 inboundCall:
   name: Queue Members Check
   description: Inbound flow that checks the number of members in a queue using a data action.
-  division: New Home
+  division: Home
   startUpRef: "/inboundCall/menus/menu[Main Menu_10]"
   defaultLanguage: en-us
   supportedLanguages:

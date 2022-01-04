@@ -17,5 +17,5 @@ variable "queue_member_ids" {
 variable "auth_division_name" {
     type        = string
     description = "The name of the Genesys Cloud auth division."
-    default     = "New Home"
+    default     = "Home"
 }
