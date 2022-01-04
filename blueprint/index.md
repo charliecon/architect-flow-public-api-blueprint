@@ -65,7 +65,7 @@ First define the environment variables that hold the OAuth credential grant that
 - `GENESYSCLOUD_OAUTHCLIENT_ID` - This is the Genesys Cloud client credential grant Id that CX as Code executes against.
 - `GENESYSCLOUD_OAUTHCLIENT_SECRET` - This is the Genesys Cloud client credential secret that CX as Code executes against.
 - `GENESYSCLOUD_REGION` - This is the Genesys Cloud region in which your organization is located.
-- `GENESYSCLOUD_ARCHY_DOMAIN` - The genesys cloud domain corresponding to your AWS region (e.g mypurecloud.com, pure.cloud, etc.)
+- `GENESYSCLOUD_ARCHY_LOCATION` - The location for the organization (e.g mypurecloud.com)
 
 ### Clone the repo
 

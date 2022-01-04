@@ -16,9 +16,5 @@ module "check_queue_flow" {
     archy_flow_file            = "archy_flow.yml"
     did_numbers                = ["+1 234-567-8910"]
     primary_queue_member_ids   = []
-    secondary_queue_member_ids = [data.genesyscloud_user.user.id]
-}
-
-data "genesyscloud_user" "user" {
-    email = "user.name@domain.com"
+    secondary_queue_member_ids = []
 }
